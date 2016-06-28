@@ -10,7 +10,7 @@ RUN echo "export JAVA_HOME=/u01/java" >> /home/weblogic/.bash_profile
 
 #Descarrega programes
 USER weblogic
-RUN mkdir -p /u01/software && cd /u01/software && \
+RUN mkdir -p /u01/software && cd /u01/software && \ 
     curl -O http://apache.rediris.es/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
     tar -xzvf apache-maven-3.3.9-bin.tar.gz && mv apache-maven-3.3.9 ../maven && \
     curl -A "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.0" -b 'oraclelicense=accept-dbindex-cookie' -OL http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz && \
